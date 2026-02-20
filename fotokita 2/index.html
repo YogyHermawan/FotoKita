@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FotoKita | Order Keychain</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="images/Logo.jpg">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>FotoKita</h1>
+    <p>Form Pemesanan Keychain Foto Strip</p>
+    <img class="logo" src="images/Logo Remove BG.png">
+
+    <form id="orderForm">
+
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" required>
+
+        <label>No WhatsApp</label>
+        <input type="tel" id="wa" required>
+
+        <label>Jumlah strap bands</label>
+        <select id="jumlah" onchange="hitungHarga()">
+            <option value="6000">tanpa strap - Rp6.000</option>
+            <option value="8000" selected>1 strap - Rp8.000</option>
+            <option value="10000">2 strap - Rp10.000</option>
+        </select>
+
+        <div class="harga" id="harga">Total: Rp8.000</div>
+        <label>Metode Pembayaran</label>
+        <select id="pembayaran" onchange="tampilkanPembayaran()">
+            <option value="">-- Pilih Metode --</option>
+            <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+            <option value="DANA">DANA</option>
+            <option value="QRIS">QRIS</option>
+        </select>
+
+        <div id="infoPembayaran" style="margin-top:10px; font-size:14px; color:#333;"></div>
+        <div id="qrisContainer" style="display:none; text-align:center; margin-top:10px;">
+            <img src="images/qris.png" style="max-width:200px;">
+                <p>Scan QRIS untuk pembayaran</p>
+        </div>
+
+
+        <label>Bentuk</label>
+        <select id="bentuk">
+            <option>Strip</option>
+            <option>Rounded</option>
+        </select>
+
+        <label>Finishing</label>
+        <select id="finishing">
+            <option>Glossy</option>
+            <option>Doff</option>
+        </select>
+
+        <label>Teks Tambahan</label>
+        <input type="text" id="teks">
+
+        <label>Catatan Tambahan</label>
+        <textarea id="catatan"></textarea>
+
+        <label>Upload 3 Foto</label>
+        <input type="file" id="foto" accept="image/*" multiple onchange="previewFoto()" required>
+            <small>Upload tepat 3 foto</small>
+        <div class="preview" id="preview"></div>
+        
+        <label>Pilih Template Foto Strip</label>
+
+        <div id="templateContainer" style="
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:10px;
+            margin-top:10px;"
+            >
+        </div>
+
+        <input type="hidden" id="templateTerpilih" name="template">
+
+
+        <button type="button" id="btnKirim" onclick="kirimData()">Pesan Sekarang</button>
+
+        <div class="loader" id="loader">⏳ Mengirim pesanan...</div>
+
+    </form>
+
+    <div class="footer">
+        © 2026 FotoKita
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
