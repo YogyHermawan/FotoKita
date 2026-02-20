@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const templateContainer = document.getElementById("templateContainer");
 
-    for(let i = 1; i <= 13; i++){
+    for(let i = 1; i <= 15; i++){
         templateContainer.innerHTML += `
             <img src="images/photostrip/template${i}.png"
                  onclick="pilihTemplate(${i})"
@@ -141,3 +141,4 @@ function tampilkanPembayaran(){
     }
 
 }
+
