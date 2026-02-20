@@ -130,7 +130,7 @@ function tampilkanPembayaran(){
         info.innerHTML = "Bisa hubungi nomor berikut <b>085736073243 </b> admin FotoKita";
     }
     else if(metode === "DANA"){
-        info.innerHTML = "DANA: <b>081232023445</b> a.n FotoKita";
+        info.innerHTML = "DANA: <b>081232023445</b> a.n Claudia";
     }
     else if(metode === "QRIS"){
         info.innerHTML = "";
@@ -141,5 +141,6 @@ function tampilkanPembayaran(){
     }
 
 }
+
 
 
