@@ -1,6 +1,6 @@
 async function kirimData(){
 
-    const url = "https://script.google.com/macros/s/AKfycbw5Pm9R96hMFWIaFvCKaM8RywcYk3SepzTXSDSvUm9lsFcQMyxRW9FkuCtB8EwIZnKoMw/exec";
+    const url = "https://script.google.com/macros/s/AKfycbyL3z1rpU061RMQ6MajJtla2JoKy4z-napypFILDmqYlqm0S1Q3yi8PyChtYRF-5TbXGg/exec";
 
     const fileInput = document.getElementById("foto");
     const files = fileInput.files;
@@ -139,4 +139,5 @@ function tampilkanPembayaran(){
     else{
         info.innerHTML = "";
     }
+
 }
